@@ -9,7 +9,8 @@
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
-    <bean id="rockBean" class="org.example.RockMusic"/>
+    <context:component-scan base-package="org.example"/>
+    <!--<bean id="rockBean" class="org.example.RockMusic"/>
     <bean id="classicBean"
           class="org.example.ClassicalMusic"
           init-method="doMyInit"
@@ -31,6 +32,6 @@
         </property>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    </bean>-->
 
 </beans>
