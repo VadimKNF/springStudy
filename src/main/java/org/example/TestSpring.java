@@ -31,7 +31,10 @@ public class TestSpring {
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        musicPlayer.setGanre(Ganres.CLASSICAL);
+        System.out.println(musicPlayer.getName());
+        System.out.println(musicPlayer.getVolume());
+
+        musicPlayer.setGanre(Ganres.RAP);
 
         Computer computer = context.getBean("computer", Computer.class);
         System.out.println(computer);

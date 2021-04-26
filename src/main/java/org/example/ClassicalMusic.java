@@ -1,12 +1,25 @@
 package org.example;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class ClassicalMusic implements Music{
+
+    @PostConstruct
+    public void initMethod() {
+        System.out.println("bean initialized");
+    }
+
+    @PreDestroy
+    public void destroyMethod() {
+        System.out.println("bean destroyed");
+    }
 
     List<String> songsList = new ArrayList<>();
 
